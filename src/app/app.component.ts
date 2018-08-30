@@ -9,5 +9,13 @@ import {MatIconRegistry} from '@angular/material';
 export class AppComponent {
   title = 'button-toggle-app';
 
+  selectedValue : String[] = ["First"]
+
   toggleOptions: Array<String> = ["First", "Second"];
+
+  selectionChanged(item) {
+    console.log("Selected value: " + item.value);
+
+    this.selectedValue.forEach(i => console.log(`Included Item: ${i}`));
+  }
 }
