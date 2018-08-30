@@ -1,4 +1,4 @@
 <mat-button-toggle-group #group="matButtonToggleGroup" multiple=true>
-  <mat-button-toggle *ngFor="let item of toggleOptions;" >{{item}}</mat-button-toggle>
+  <mat-button-toggle *ngFor="let item of toggleOptions;" [value]="item">{{item}}</mat-button-toggle>
 </mat-button-toggle-group>
 <div class="example-selected-value">Selected value: {{group.value}}</div>
